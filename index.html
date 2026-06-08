@@ -326,14 +326,170 @@
       </div>
     </div>
   </section>
-  
+    <!-- ===== SLIDESHOW ===== -->
+  <section class="slideshow-section" id="galeria">
+    <div class="slideshow-wrapper">
+      <div class="section__label">
+        <span class="section__num">07</span>
+        <span>Galeria</span>
+      </div>
+      <h2 class="section__title" style="margin-bottom:1.5rem;font-family:var(--font-display);font-weight:700;font-size:clamp(1.9rem,4vw,3rem);color:var(--cream);">Missão em imagens</h2>
 
+      <div class="slideshow">
+        <!-- Slide 1 -->
+        <div class="slide slide--ativo">
+          <img src="./assets/img/estaçao espacial.jpg" alt="Estação Espacial Internacional" loading="lazy" />
+          <p class="slide__caption">Estação Espacial Internacional — base das pesquisas GravityShield</p>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="./assets/img/doisastronautas.jpeg" alt="Astronautas em atividade extraveicular" loading="lazy" />
+          <p class="slide__caption">Astronautas em atividade extraveicular — expostos à microgravidade</p>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img src="./assets/img/terraespaç.jpg" alt="Terra vista do espaço" loading="lazy" />
+          <p class="slide__caption">Terra vista da órbita — o destino que vale proteger</p>
+        </div>
 
+        <!-- Controles -->
+        <button class="slideshow__ctrl slideshow__ctrl--ant" id="slide-anterior" aria-label="Slide anterior">‹</button>
+        <button class="slideshow__ctrl slideshow__ctrl--prox" id="slide-proximo" aria-label="Próximo slide">›</button>
 
+        <!-- Dots -->
+        <div class="slideshow__dots">
+          <button class="slide-dot slide-dot--ativo" aria-label="Slide 1"></button>
+          <button class="slide-dot" aria-label="Slide 2"></button>
+          <button class="slide-dot" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== QUIZ ===== -->
+  <section class="quiz-section" id="quiz">
+    <div class="quiz-wrapper">
+      <div class="section__label">
+        <span class="section__num">08</span>
+        <span>Quiz</span>
+      </div>
+      <div class="quiz-body">
+        <h2 class="section__title">Teste seus conhecimentos</h2>
+        <p class="section__text">
+          Quanto você sabe sobre saúde espacial e o GravityShield? Responda as 10 perguntas e descubra.
+        </p>
+        <div id="quiz-container">
+          <!-- renderizado pelo script.js -->
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== FORMULÁRIO ===== -->
+  <section class="form-section" id="contato">
+    <div class="form-wrapper">
+      <div class="section__label">
+        <span class="section__num">09</span>
+        <span>Contato</span>
+      </div>
+      <div class="form-body">
+        <h2 class="section__title">Entre em contato</h2>
+        <p class="section__text">
+          Tem interesse no projeto, sugestões ou quer colaborar? Preencha o formulário abaixo.
+        </p>
 
+        <form id="form-contato" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nome">Nome *</label>
+              <input
+                type="text"
+                id="nome"
+                data-campo="nome"
+                placeholder="Seu nome completo"
+                autocomplete="name"
+              />
+              <span class="form-erro" data-erro="nome">Por favor, insira seu nome.</span>
+            </div>
 
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input
+                type="email"
+                id="email"
+                data-campo="email"
+                placeholder="seu@email.com"
+                autocomplete="email"
+              />
+              <span class="form-erro" data-erro="email">Por favor, insira seu e-mail.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="area">Área de atuação *</label>
+              <select id="area" data-campo="area">
+                <option value="">Selecione...</option>
+                <option>Engenharia de Software</option>
+                <option>Medicina / Saúde</option>
+                <option>Ciências Espaciais</option>
+                <option>Pesquisa Acadêmica</option>
+                <option>Outro</option>
+              </select>
+              <span class="form-erro" data-erro="area">Por favor, selecione uma área.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="assunto">Assunto *</label>
+              <input
+                type="text"
+                id="assunto"
+                data-campo="assunto"
+                placeholder="Motivo do contato"
+              />
+              <span class="form-erro" data-erro="assunto">Por favor, insira o assunto.</span>
+            </div>
+
+            <div class="form-group form-group--full">
+              <label for="mensagem">Mensagem *</label>
+              <textarea
+                id="mensagem"
+                data-campo="mensagem"
+                rows="5"
+                placeholder="Descreva sua mensagem..."
+              ></textarea>
+              <span class="form-erro" data-erro="mensagem">Por favor, escreva sua mensagem.</span>
+            </div>
+          </div>
+
+          <button type="submit" class="form-submit">Enviar mensagem →</button>
+          <div class="form-sucesso" id="form-sucesso">
+            ✓ Mensagem enviada com sucesso! Entraremos em contato em breve.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__icon">⬡</span>
+        <span>GravityShield</span>
+      </div>
+      <p class="footer__desc">FIAP · Global Solution 2026 · Engenharia de Software</p>
+      <div class="footer__team">
+        <p class="footer__team-title">Equipe</p>
+        <div class="footer__members">
+          <span>Eduardo Guzeli Nogueira <em>RM 571143</em></span>
+          <span>Gabriel Kenzo <em>RM 569780</em></span>
+          <span>Eric Kang <em>RM 572575</em></span>
+          <span>Lucas Dos Santos Oliveira <em>RM 571718</em></span>
+          <span>Diego Caio de Ulhôa Augusto <em>RM 572190</em></span>
+        </div>
+      </div>
+      <p class="footer__copy">Prof.Wellington Cidade Silva Tenorio  ·WebDev/p>
+    </div>
+  </footer>
 
     <script src="./src/js/script.js"></script>
 </body>
