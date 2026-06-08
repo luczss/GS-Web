@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Syne:wght@400;700&family=Inter:wght@400;500&display=swap');
+
+/* ============================================
+   VARIÁVEIS
+   ============================================ */
+:root {
+  /* Fundos */
+  --bg-void:    #0d0a14;
+  --bg-deep:    #120f1e;
+  --bg-base:    #1a1628;
+  --bg-raised:  #231e35;
+  --bg-card:    #2a2440;
+
+  /* Creme / off-white */
+  --cream:      #f2ede4;
+  --cream-dim:  #c8c0b0;
+  --cream-faint:#6b6460;
+
+  /* Roxo */
+  --plum:       #6d28d9;
+  --plum-mid:   #5b21b6;
+  --plum-soft:  rgba(109, 40, 217, 0.12);
+  --plum-line:  rgba(109, 40, 217, 0.2);
+  --plum-glow:  rgba(109, 40, 217, 0.08);
+
+  /* Acento âmbar mínimo */
+  --accent:     #c97d1a;
+
+  /* Bordas */
+  --b-faint:    rgba(242, 237, 228, 0.05);
+  --b-soft:     rgba(242, 237, 228, 0.1);
+  --b-purple:   rgba(109, 40, 217, 0.22);
+
+  /* Tipografia */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-ui:      'Syne', sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  /* Layout */
+  --nav-h:  64px;
+  --max-w:  1080px;
+  --pad-x:  clamp(1.25rem, 5vw, 3.5rem);
+  --gap-section: clamp(5rem, 10vw, 9rem);
+  --radius: 2px;
+}
