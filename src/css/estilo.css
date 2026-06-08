@@ -760,3 +760,105 @@ body {
       margin-top: 0.4rem;
       margin-bottom: 2rem;
     }
+    /* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+/* Tablet — seta da tech-stack some antes de quebrar */
+@media (max-width: 880px) {
+  .tech-arrow { display: none; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav__links { display: none; }
+
+  .hero__orb {
+    width: 240px;
+    height: 240px;
+    right: -40px;
+  }
+
+  .hero__stat-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .stat__divider { display: none; }
+  .stat { padding: 0; flex: none; width: 100%; }
+
+  .section__inner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .section__label {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    gap: 0.75rem;
+  }
+
+  .section__num { font-size: 1.5rem; }
+
+  .cards-row { flex-direction: column; }
+  .card { flex: none; width: 100%; }
+
+  .tech-stack { flex-direction: column; background: none; gap: 1px; }
+  .tech-item  { flex: none; width: 100%; }
+  .tech-arrow { display: none; }
+
+  .personas { grid-template-columns: repeat(2, 1fr); }
+
+  .benefits-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 420px) {
+  .hero__title { font-size: clamp(3rem, 14vw, 4rem); }
+
+  .personas       { grid-template-columns: 1fr; }
+  .benefits-grid  { grid-template-columns: 1fr; }
+
+  .timeline { padding-left: 1.25rem; }
+  .timeline__item::before       { left: -1.6rem; }
+  .timeline__item--alert::before { left: -1.65rem; }
+}
+
+.tema-bar {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.tema-bar__label {
+  font-family: var(--font-ui);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+  margin-bottom: 0.15rem;
+}
+
+.tema-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--b-soft);
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+  position: relative;
+}
+
+.tema-btn:hover { transform: scale(1.15); }
+.tema-btn--ativo { border-color: var(--cream); transform: scale(1.1); }
+
+.tema-btn[data-tema="escuro"] { background: #1a1628; }
+.tema-btn[data-tema="azul"]   { background: #0f1a36; }
+.tema-btn[data-tema="verde"]  { background: #0c1e16; }
