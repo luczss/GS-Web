@@ -357,3 +357,48 @@ body {
   max-width: 520px;
   margin-bottom: 2.5rem;
 }
+/* ============================================
+   S1 — CARDS
+   ============================================ */
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  background: var(--b-purple);
+  border: 1px solid var(--b-purple);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.card {
+  flex: 1 1 180px;
+  padding: 1.75rem 1.5rem;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  transition: background 0.18s ease;
+}
+
+.card:hover { background: var(--bg-raised); }
+
+.card--alert { border-top: 2px solid var(--accent); }
+
+.card__icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.card strong {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--cream);
+  letter-spacing: 0.01em;
+}
+
+.card p {
+  font-size: 0.8rem;
+  color: var(--cream-dim);
+  line-height: 1.65;
+}
