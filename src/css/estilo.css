@@ -291,3 +291,69 @@ body {
   margin-right: 2.5rem;
   align-self: center;
 }
+/* ============================================
+   SECTIONS — LAYOUT BASE
+   ============================================ */
+.section {
+  padding: var(--gap-section) var(--pad-x);
+}
+
+.section--dark    { background: var(--bg-void); }
+.section--mid     { background: var(--bg-deep); }
+.section--surface { background: var(--bg-base); }
+.section--light   { background: var(--bg-raised); }
+.section--accent  { background: var(--bg-card); }
+.section--space   { background: var(--bg-deep); }
+
+.section__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  gap: clamp(2.5rem, 6vw, 7rem);
+  align-items: flex-start;
+}
+
+/* Rótulo lateral */
+.section__label {
+  flex-shrink: 0;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 0.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--cream-faint);
+}
+
+.section__num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgba(192, 168, 255, 0.5);
+  line-height: 1;
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+.section__body { flex: 1; min-width: 0; }
+
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.section__text {
+  font-size: 0.93rem;
+  line-height: 1.9;
+  color: var(--cream-dim);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
