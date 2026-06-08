@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GravityShield</title>
-    <link rel="stylesheet" href="./src/css/estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GravityShield — Saúde Inteligente no Espaço</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/css/estilo.css" />
 </head>
 <body>
+    <!-- ===== TROCA DE TEMA ===== -->
+  <div class="tema-bar">
+    <span class="tema-bar__label">Tema</span>
+    <button class="tema-btn tema-btn--ativo" data-tema="escuro" title="Tema Escuro (Roxo)"></button>
+    <button class="tema-btn" data-tema="azul"   title="Tema Azul Espacial"></button>
+    <button class="tema-btn" data-tema="verde"  title="Tema Verde Nebulosa"></button>
+  </div>
 
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__brand">
+      <span class="nav__icon">⬡</span>
+      <span class="nav__name">GravityShield</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#problema">Problema</a></li>
+      <li><a href="#tecnologia">Tecnologia</a></li>
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#publico">Público</a></li>
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#aplicacao">Aplicação</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
 
+  <!-- HERO -->
+  <header class="hero">
+    <img
+      class="gs-img-hero"
+      src="./assets/img/estaçao espacial.jpg"
+      alt="terra vista do espaço"
+      loading="eager"
+    />
+    <div class="hero__noise"></div>
+    <div class="hero__grid-bg"></div>
+    <div class="hero__content">
+      <p class="hero__tag">FIAP · Global Solution 2026</p>
+      <h1 class="hero__title">
+        Gravity<br /><em>Shield</em>
+      </h1>
+      <p class="hero__sub">
+        Sistema Inteligente de Saúde e Controle Gravitacional para Astronautas
+      </p>
+      <a href="#problema" class="hero__cta">Explorar solução ↓</a>
+    </div>
+    <div class="hero__stat-bar">
+      <div class="stat">
+        <span class="stat__num">−20%</span>
+        <span class="stat__label">massa muscular em 6 meses</span>
+      </div>
+      <div class="stat__divider"></div>
+      <div class="stat">
+        <span class="stat__num">−15%</span>
+        <span class="stat__label">densidade óssea sem proteção</span>
+      </div>
+      <div class="stat__divider"></div>
+      <div class="stat">
+        <span class="stat__num">72h</span>
+        <span class="stat__label">antecedência preditiva da IA</span>
+      </div>
+    </div>
+  </header>
 
 
 
