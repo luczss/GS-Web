@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Syne:wght@400;700&family=Inter:wght@400;500&display=swap');
 
+
 /* ============================================
    VARIÁVEIS
    ============================================ */
@@ -42,4 +43,30 @@
   --pad-x:  clamp(1.25rem, 5vw, 3.5rem);
   --gap-section: clamp(5rem, 10vw, 9rem);
   --radius: 2px;
+}
+
+/* ============================================
+   RESET
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img, svg { display: block; max-width: 100%; }
+
+/* ============================================
+   BASE
+   ============================================ */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  background: var(--bg-void);
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
