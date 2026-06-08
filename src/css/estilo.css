@@ -122,3 +122,172 @@ body {
 }
 
 .nav__links a:hover { color: var(--cream); }
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: calc(var(--nav-h) + 2rem) var(--pad-x) 0;
+  background: var(--bg-void);
+  overflow: hidden;
+}
+
+/* Grade sutil */
+.hero__grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--b-faint) 1px, transparent 1px),
+    linear-gradient(90deg, var(--b-faint) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 10%, transparent 90%);
+          mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 10%, transparent 90%);
+}
+
+/* Mancha de cor — roxo bem sutil */
+.hero__orb {
+  position: absolute;
+  width: min(560px, 80vw);
+  height: min(560px, 80vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(109, 40, 217, 0.18) 0%, transparent 65%);
+  top: 0; right: -10%;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.hero__content {
+  position: relative;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 0;
+}
+
+/* Eyebrow */
+.hero__tag {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero__tag::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Título principal */
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-bottom: 2.5rem;
+}
+
+.hero__title em {
+  font-style: italic;
+  color: rgba(192, 168, 255, 0.9);
+  display: block;
+}
+
+/* Subtítulo */
+.hero__sub {
+  font-size: clamp(0.875rem, 1.4vw, 1rem);
+  line-height: 1.9;
+  color: var(--cream-dim);
+  max-width: 400px;
+  margin-bottom: 3rem;
+}
+
+/* CTA */
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: var(--plum);
+  padding: 0.9rem 2.25rem;
+  border-radius: var(--radius);
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.hero__cta:hover {
+  background: var(--plum-mid);
+  transform: translateY(-2px);
+}
+
+/* Barra de stats */
+.hero__stat-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid var(--b-purple);
+  padding: 2rem 0;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.stat {
+  flex: 1 1 120px;
+  padding: 0 2.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat:first-child { padding-left: 0; }
+
+.stat__num {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1;
+  color: var(--cream);
+  letter-spacing: -0.02em;
+}
+
+.stat__label {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cream-faint);
+}
+
+.stat__divider {
+  width: 1px;
+  height: 40px;
+  background: var(--b-purple);
+  flex-shrink: 0;
+  margin-right: 2.5rem;
+  align-self: center;
+}
