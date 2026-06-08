@@ -643,3 +643,120 @@ body {
 }
 
 .timeline__item--alert .timeline__content strong { color: var(--accent); }
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--bg-void);
+  padding: 4rem var(--pad-x);
+  border-top: 1px solid var(--b-purple);
+}
+
+.footer__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--cream);
+}
+
+.footer__icon {
+  color: rgba(192, 168, 255, 0.7);
+  font-size: 1.25rem;
+}
+
+.footer__desc {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--cream-faint);
+}
+
+.footer__team-title {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--cream-faint);
+  margin-bottom: 0.5rem;
+}
+
+.footer__members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.5rem;
+}
+
+.footer__members span {
+  font-size: 0.82rem;
+  color: var(--cream-dim);
+}
+
+.footer__members em {
+  font-style: normal;
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  color: var(--cream-faint);
+  margin-left: 0.3rem;
+}
+
+.footer__copy {
+  font-size: 0.7rem;
+  color: var(--cream-faint);
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--b-faint);
+}
+    .gs-img-hero {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero__content, .hero__stat-bar { position: relative; z-index: 1; }
+
+    .gs-img-section {
+      display: block;
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 2px;
+      opacity: 0.85;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(109,40,217,0.22);
+    }
+
+    .gs-img-inline {
+      display: block;
+      width: 100%;
+      border-radius: 2px;
+      object-fit: cover;
+      margin-top: 2rem;
+      border: 1px solid rgba(109,40,217,0.22);
+      opacity: 0.9;
+    }
+
+    .gs-img-caption {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(200,192,176,0.45);
+      margin-top: 0.4rem;
+      margin-bottom: 2rem;
+    }
