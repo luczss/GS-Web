@@ -574,3 +574,72 @@ body {
   line-height: 1.65;
   color: var(--cream-dim);
 }
+/* ============================================
+   S6 — TIMELINE
+   ============================================ */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--b-purple);
+  padding-left: 2rem;
+}
+
+.timeline__item {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--b-faint);
+  align-items: flex-start;
+}
+
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: -2.35rem;
+  top: 1.6rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cream-faint);
+  border: 2px solid var(--bg-base);
+}
+
+.timeline__item--alert::before {
+  background: var(--accent);
+  width: 9px;
+  height: 9px;
+  left: -2.4rem;
+}
+
+.timeline__item:last-child { border-bottom: none; }
+
+.timeline__time {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  color: rgba(192, 168, 255, 0.6);
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+  min-width: 52px;
+  letter-spacing: 0.04em;
+}
+
+.timeline__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.timeline__content strong {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cream);
+}
+
+.timeline__content p {
+  font-size: 0.78rem;
+  color: var(--cream-dim);
+  line-height: 1.6;
+}
+
+.timeline__item--alert .timeline__content strong { color: var(--accent); }
