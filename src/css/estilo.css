@@ -70,3 +70,55 @@ body {
   overflow-wrap: break-word;
   word-break: break-word;
 }
+/* ============================================
+   NAV
+   ============================================ */
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--pad-x);
+  background: rgba(13, 10, 20, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--b-purple);
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+  color: var(--cream);
+  flex-shrink: 0;
+}
+
+.nav__icon {
+  color: rgba(192, 168, 255, 0.8);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.nav__links {
+  display: flex;
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.nav__links a {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  transition: color 0.18s ease;
+  white-space: nowrap;
+}
+
+.nav__links a:hover { color: var(--cream); }
